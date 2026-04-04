@@ -35,7 +35,7 @@ export const LinkCard = ({ title, subtitle, href, icon, isFeatured, delay = 0 }:
       </div>
 
       <div className="flex items-center gap-4 z-20">
-        <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-[#f0fff4] text-neon-green transition-transform duration-300 group-hover:scale-110">
+        <div className="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-[#1a1a1a] text-neon-green transition-transform duration-300 group-hover:rotate-[10deg] group-hover:scale-110 shadow-lg border border-white/5">
           {icon}
         </div>
         <div className="flex flex-col">

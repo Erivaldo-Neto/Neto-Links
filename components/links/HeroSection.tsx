@@ -36,8 +36,8 @@ export const HeroSection = () => {
         animate={{ opacity: 0.45, filter: "blur(0px)" }}
         transition={{ duration: 0.5, delay: 0.1 }}
         style={{
-          top: '13%',
-          fontSize: 'clamp(2rem, 11vw, 2.6rem)'
+          top: '12%',
+          fontSize: 'clamp(2.8rem, 10vw, 2.9rem)'
         }}
         className="absolute left-0 right-0 text-center z-1 w-full pointer-events-none select-none font-bold tracking-tighter text-[#0a0a0a] uppercase font-poppins"
       >
@@ -55,9 +55,9 @@ export const HeroSection = () => {
         animate={{ opacity: 1, filter: "blur(0px)" }}
         transition={{ duration: 0.5, delay: 0.25 }}
         style={{
-          top: '22%',
+          top: '24%',
           right: '5%',
-          fontSize: 'clamp(2.5rem, 11vw, 2.9rem)'
+          fontSize: 'clamp(2.3rem, 11vw, 2.6rem)'
         }}
         className="absolute z-1 pointer-events-none select-none font-bold tracking-tighter text-[#00FF55] uppercase font-poppins"
       >
