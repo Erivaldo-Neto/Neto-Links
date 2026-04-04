@@ -52,9 +52,9 @@ export default function LinksPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="font-questrial text-neon-green/60 text-[14px]"
+            className="font-questrial text-neon-green text-[14px]"
           >
-            sites profissionais que convertem
+            - sites profissionais que convertem -
           </motion.p>
 
           <motion.div 
