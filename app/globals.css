@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-questrial: "Questrial", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-neon-green: #00FF55;
+  --color-neutral-bg: #f9f9f7;
+  --color-primary-text: #0a0a0a;
+
+  --breakpoint-tablet: 431px;
+  --breakpoint-desktop: 768px;
+}
+
+@layer base {
+  body {
+    @apply bg-neutral-bg text-primary-text antialiased;
+  }
+}
+
+@layer components {
+  /* No custom classes yet */
+}
