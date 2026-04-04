@@ -68,7 +68,7 @@ export default function LinksPage() {
           {/* LINKS STACK */}
           <div className="flex flex-col gap-3 w-full">
             <LinkCard 
-              href="https://netowebsites.com.br"
+              href="https://netowebsites.vercel.app/"
               title="Neto Websites"
               subtitle="Veja meus projetos e serviços de criação de sites."
               icon={<FontAwesomeIcon icon={faGlobe} className="text-xl" />}
@@ -92,7 +92,7 @@ export default function LinksPage() {
               delay={0.60}
             />
             <LinkCard 
-              href="https://linkedin.com/in/erivaldoneto"
+              href="https://linkedin.com/in/erivaldo-neto0122"
               title="LinkedIn"
               subtitle="Trajetória profissional e conexões na área de tech."
               icon={<FontAwesomeIcon icon={faLinkedin} className="text-xl" />}
