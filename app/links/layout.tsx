@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Neto Websites | Links",
     description: "Sites profissionais que convertem.",
-    images: ["/assets/Neto-SemFundo.png"],
+    images: ["/assets/Neto-SemFundo.webp"],
   },
 };
 

@@ -17,7 +17,7 @@ export const HeroSection = () => {
       */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/Background-Fundo.png"
+          src="/assets/Background-Fundo.webp"
           alt="Wall Background"
           fill
           className="object-cover"
@@ -101,7 +101,7 @@ export const HeroSection = () => {
       >
         <div className="relative w-full h-full">
           <Image
-            src="/assets/Neto-SemFundo.png"
+            src="/assets/Neto-SemFundo.webp"
             alt="Erivaldo Neto"
             fill
             className="object-contain object-bottom"
