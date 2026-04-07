@@ -42,36 +42,46 @@ export const LinkCard = ({
         hover:shadow-[0_0_0_1px_rgba(0,255,85,0.5),0_0_20px_rgba(0,255,85,0.2),0_0_40px_rgba(0,255,85,0.08)]
         ${isFeatured && !hasBg ? "border-l-[3px] border-l-neon-green bg-[#fafff9]" : "border border-black/[0.07]"}
       `}
-      style={{ minHeight: hasBg ? "88px" : undefined }}
+      style={{ minHeight: hasBg ? "100px" : "80px" }}
     >
-      {/* Layer 1: Background Image */}
-      {hasBg && (
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src={backgroundImage}
-            alt={title}
-            fill
-            sizes="420px"
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
-            style={{ filter: "blur(3px)" }}
-            loading="lazy"
-          />
-        </div>
-      )}
+      {/* Container with clip-path to cut the corner */}
+      <div 
+        className="absolute inset-0 z-0 transition-all duration-300"
+        style={{ 
+          clipPath: "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%)"
+        }}
+      >
+        {/* Layer 1: Background Image */}
+        {hasBg && (
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <Image
+              src={backgroundImage}
+              alt={title}
+              fill
+              sizes="420px"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              style={{ filter: "blur(3px)" }}
+              loading="lazy"
+            />
+          </div>
+        )}
 
-      {/* Layer 2: Dark Overlay */}
-      {hasBg && (
-        <div className="absolute inset-0 z-[1] bg-black/55" />
-      )}
+        {/* Layer 2: Dark Overlay */}
+        {hasBg && (
+          <div className="absolute inset-0 z-[1] bg-black/55" />
+        )}
+        
+        {/* Background color for cards without image */}
+        {!hasBg && <div className={`absolute inset-0 z-0 ${isFeatured ? "bg-[#fafff9]" : "bg-white"}`} />}
+      </div>
 
-      {/* Dog-ear effect (Layer 2.5) */}
-      <div className="absolute top-0 right-0 w-[18px] h-[18px] z-10 group-hover:w-[22px] group-hover:h-[22px] transition-all duration-300">
-        <div className="absolute inset-0 z-[5] bg-[#f5f5f3]" />
-        <div className="absolute inset-0 bg-neon-green/90 z-[10] [clip-path:polygon(0_0,100%_100%,0_100%)] shadow-[-2px_2px_4px_rgba(0,0,0,0.05)]" />
+      {/* Folded Part (Dog-ear) - Outside the clip-path container */}
+      <div className="absolute top-0 right-0 w-[24px] h-[24px] z-10 transition-all duration-300">
+        <div className="absolute inset-0 bg-neon-green/90 z-[10] [clip-path:polygon(0_0,100%_100%,0_100%)] shadow-[-2px_2px_4px_rgba(0,0,0,0.1)] transition-transform duration-300" />
       </div>
 
       {/* Layer 3: Content */}
-      <div className="flex items-center gap-4 z-20">
+      <div className="flex items-center gap-4 z-20 w-full pr-6">
         <div className="flex-shrink-0 flex items-center justify-center w-11 h-11 rounded-full bg-[#1a1a1a] text-neon-green transition-transform duration-300 group-hover:rotate-[10deg] group-hover:scale-110 shadow-lg border border-white/5">
           {icon}
         </div>
