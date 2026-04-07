@@ -36,17 +36,18 @@ export const LinkCard = ({
       transition={{ duration: 0.4, delay: 0.2 + delay, ease: "easeOut" }}
       whileHover={{ y: -3 }}
       whileTap={{ scale: 0.98 }}
-      className={`group relative flex items-center justify-between w-full max-w-[420px] p-4 rounded-2xl transition-all duration-250 cursor-pointer overflow-hidden
-        ${hasBg ? "min-h-[88px]" : "bg-white"}
+      className={`group relative flex items-center justify-between w-full max-w-[420px] p-4 rounded-2xl transition-all duration-250 cursor-pointer
         shadow-[0_0_0_1px_rgba(0,255,85,0.3),0_0_12px_rgba(0,255,85,0.12),0_0_24px_rgba(0,255,85,0.06)] 
         hover:shadow-[0_0_0_1px_rgba(0,255,85,0.5),0_0_20px_rgba(0,255,85,0.2),0_0_40px_rgba(0,255,85,0.08)]
-        ${isFeatured && !hasBg ? "border-l-[3px] border-l-neon-green bg-[#fafff9]" : "border border-black/[0.07]"}
       `}
       style={{ minHeight: hasBg ? "100px" : "80px" }}
     >
-      {/* Container with clip-path to cut the corner */}
+      {/* Container com clip-path que agora contém o fundo, bordas e arredondamento */}
       <div 
-        className="absolute inset-0 z-0 transition-all duration-300"
+        className={`absolute inset-0 z-0 transition-all duration-300 rounded-2xl overflow-hidden
+          ${hasBg ? "bg-black" : (isFeatured ? "bg-[#fafff9]" : "bg-white")}
+          ${isFeatured && !hasBg ? "border-l-[3px] border-l-neon-green" : "border border-black/[0.07]"}
+        `}
         style={{ 
           clipPath: "polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%)"
         }}
@@ -70,9 +71,6 @@ export const LinkCard = ({
         {hasBg && (
           <div className="absolute inset-0 z-[1] bg-black/55" />
         )}
-        
-        {/* Background color for cards without image */}
-        {!hasBg && <div className={`absolute inset-0 z-0 ${isFeatured ? "bg-[#fafff9]" : "bg-white"}`} />}
       </div>
 
       {/* Folded Part (Dog-ear) - Outside the clip-path container */}
