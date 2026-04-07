@@ -84,7 +84,7 @@ export default function LinksPage() {
               delay={0.2}
             />
             <LinkCard 
-              href="https://linkedin.com/in/erivaldo-neto"
+              href="https://linkedin.com/in/erivaldo-neto0122"
               title="LinkedIn"
               subtitle="Trajetória profissional e conexões na área de tech."
               backgroundImage="/assets/Linkedin-Fundo.webp"
