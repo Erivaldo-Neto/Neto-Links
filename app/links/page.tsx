@@ -84,20 +84,20 @@ export default function LinksPage() {
               delay={0.2}
             />
             <LinkCard 
-              href="https://github.com/Erivaldo-Neto"
-              title="GitHub"
-              subtitle="Repositórios e projetos de código aberto."
-              backgroundImage="/assets/GitHub-Fundo.webp"
-              icon={<FontAwesomeIcon icon={faGithub} className="text-xl" />}
-              isFeatured={false}
-              delay={0.3}
-            />
-            <LinkCard 
               href="https://linkedin.com/in/erivaldo-neto0122"
               title="LinkedIn"
               subtitle="Trajetória profissional e conexões na área de tech."
               backgroundImage="/assets/Linkedin-Fundo.webp"
               icon={<FontAwesomeIcon icon={faLinkedin} className="text-xl" />}
+              isFeatured={false}
+              delay={0.3}
+            />
+            <LinkCard 
+              href="https://github.com/Erivaldo-Neto"
+              title="GitHub"
+              subtitle="Repositórios e projetos de código aberto."
+              backgroundImage="/assets/GitHub-Fundo.webp"
+              icon={<FontAwesomeIcon icon={faGithub} className="text-xl" />}
               isFeatured={false}
               delay={0.4}
             />
