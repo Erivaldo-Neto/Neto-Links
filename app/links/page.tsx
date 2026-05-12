@@ -96,7 +96,7 @@ export default function LinksPage() {
               href="https://tiktok.com/@erivaldo.neto"
               title="TikTok"
               subtitle="Dicas de desenvolvimento e bastidores dos projetos."
-              backgroundImage={null}
+              backgroundImage="/assets/tiktok-background.webp"
               icon={<FontAwesomeIcon icon={faTiktok} className="text-xl" />}
               isFeatured={false}
               delay={0.4}
@@ -105,7 +105,7 @@ export default function LinksPage() {
               href="https://instagram.com/erivaldo.neto"
               title="Instagram"
               subtitle="Projetos, processo criativo e novidades."
-              backgroundImage={null}
+              backgroundImage="/assets/instagram-background.webp"
               icon={<FontAwesomeIcon icon={faInstagram} className="text-xl" />}
               isFeatured={false}
               delay={0.5}
