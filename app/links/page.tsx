@@ -75,13 +75,22 @@ export default function LinksPage() {
               delay={0.1}
             />
             <LinkCard 
+              href="https://instagram.com/erivaldo.neto"
+              title="Instagram"
+              subtitle="Projetos, processo criativo e novidades."
+              backgroundImage="/assets/instagram-background.webp"
+              icon={<FontAwesomeIcon icon={faInstagram} className="text-xl" />}
+              isFeatured={false}
+              delay={0.2}
+            />
+            <LinkCard 
               href="https://github.com/Erivaldo-Neto"
               title="GitHub"
               subtitle="Repositórios e projetos de código aberto."
               backgroundImage="/assets/GitHub-Fundo.webp"
               icon={<FontAwesomeIcon icon={faGithub} className="text-xl" />}
               isFeatured={false}
-              delay={0.2}
+              delay={0.3}
             />
             <LinkCard 
               href="https://linkedin.com/in/erivaldo-neto0122"
@@ -90,7 +99,7 @@ export default function LinksPage() {
               backgroundImage="/assets/Linkedin-Fundo.webp"
               icon={<FontAwesomeIcon icon={faLinkedin} className="text-xl" />}
               isFeatured={false}
-              delay={0.3}
+              delay={0.4}
             />
             <LinkCard 
               href="https://tiktok.com/@erivaldo.neto"
@@ -98,15 +107,6 @@ export default function LinksPage() {
               subtitle="Dicas de desenvolvimento e bastidores dos projetos."
               backgroundImage="/assets/tiktok-background.webp"
               icon={<FontAwesomeIcon icon={faTiktok} className="text-xl" />}
-              isFeatured={false}
-              delay={0.4}
-            />
-            <LinkCard 
-              href="https://instagram.com/erivaldo.neto"
-              title="Instagram"
-              subtitle="Projetos, processo criativo e novidades."
-              backgroundImage="/assets/instagram-background.webp"
-              icon={<FontAwesomeIcon icon={faInstagram} className="text-xl" />}
               isFeatured={false}
               delay={0.5}
             />
